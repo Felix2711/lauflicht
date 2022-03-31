@@ -26,41 +26,46 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QPushButton" name="stopButton">
-        <property name="text">
-         <string>stop</string>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QPushButton" name="startButton">
         <property name="text">
          <string>start</string>
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="stopButton">
+        <property name="text">
+         <string>stop</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QHBoxLayout" name="ledBox">
+      <item>
+       <widget class="QRadioButton" name="led0">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
       <item>
        <widget class="QRadioButton" name="led1">
         <property name="text">
          <string/>
         </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="led3">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="led0">
-        <property name="text">
-         <string/>
+        <property name="checkable">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
@@ -69,12 +74,31 @@
         <property name="text">
          <string/>
         </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="led3">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
      </layout>
     </item>
     <item>
      <widget class="QSlider" name="speed">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>10</number>
+      </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
