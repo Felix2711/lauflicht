@@ -25,16 +25,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
-        gui.cpp \
+    main.cpp \
+    gui.cpp \
     gpio.cpp
 
 HEADERS += \
-        gui.h \
+    gui.h \
     gpio.h
 
 FORMS += \
-        gui.ui
+    gui.ui
+
+LIBS += -llgpio
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

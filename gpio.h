@@ -3,15 +3,20 @@
 
 #include <QObject>
 
-class gpio : public QObject
+const int CHIP = 0;
+const int FLAGS = 0;
+const QList<int> LEDS = {18, 23, 24, 25};
+
+class Gpio : public QObject
 {
     Q_OBJECT
 public:
-    explicit gpio(QObject *parent = nullptr);
+    explicit Gpio(QObject *parent = nullptr);
+    void set(int pin, bool state);
 
-signals:
+private:
+    int m_handle;
 
-public slots:
 };
 
 #endif // GPIO_H

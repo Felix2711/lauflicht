@@ -2,6 +2,7 @@
 #define GUI_H
 
 #include "ui_gui.h"
+#include "gpio.h"
 
 #include <QTimer>
 #include <QList>
@@ -27,7 +28,11 @@ private:
     bool m_state;
 
     QList<QRadioButton*> m_uiLEDs;
+    QList<int> m_leds;
+
     QTimer *m_timer;
+
+    Gpio *m_gpio;
 };
 
 #endif // GUI_H
